@@ -1,0 +1,25 @@
+.icon-qp-sm{
+  background-image: url("../../app-assets/images/icons/qp.png");
+  background-position: 0 0;
+    width: 22px;
+    height: 22px;
+    display: inline-block;
+    background-size: cover;
+    float:left;
+}
+.icon-qp-md{
+  background-image: url("../../app-assets/images/icons/qp.png");
+  background-position: 0 0;
+    width: 42px;
+    height: 42px;
+    display: inline-block;
+    background-size: cover;
+}
+.icon-qp-lg{
+  background-image: url("../../app-assets/images/icons/qp.png");
+  background-position: 0 0;
+    width: 64px;
+    height: 64px;
+    display: inline-block;
+    background-size: cover;
+}

@@ -1,0 +1,1145 @@
+/*
+Theme Name: RISE
+Theme URI: http://www.rise.hs.iastate.com/
+Description: RISE is a hybrid style of the CoHS, ISU, and RISE styles.
+Updated by: Joshua Mitchell
+Date: December 11, 2016
+*/
+
+/* --- Table of Contents --- */
+
+/*
+    RESET
+    BODY
+    HEADER
+    ISU INDEX
+    SEARCH FORM
+    MAIN CONTENT
+    FOOTER
+    CLEAR FIX
+    HEADINGS
+    CONTENT
+    SIDEBAR
+    TABLES
+    PROJECTS
+    LISTS
+    IMAGES
+    ALERT BOX
+ 	GLOSSY MENU
+	GLOSSY MENU SUBMENU
+	NEWS MENU
+	NEWS STYLES
+	SIDEBAR CONTACT INFO
+	CONTACT FORM
+	TABS
+*/
+
+
+/* --- RESET --- */
+
+/**
+ * RESET.CSS
+ * @see: http://meyerweb.com/eric/tools/css/reset/  |
+ * v1.0 20080212
+ *
+ * Nothing like a clean canvas...
+ */
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td { margin: 0; padding: 0; border: 0; outline: 0; font-size: 100%; vertical-align: baseline;}
+body {line-height: 1;}
+ol, ul { list-style: none;}
+:focus {outline: 0;}
+ins {text-decoration: none;}
+del {text-decoration: line-through;}
+table {border-collapse: collapse;border-spacing: 0;}
+
+/* --- BODY --- */
+
+html, body {
+	font-family: 'nimbus sans', sans-serif;
+	font-size: 0.938em;
+	line-height: 1.35em;
+}
+
+html, body, #wrap {
+	height: 100%
+}
+
+body > #wrap {
+	height: auto;
+	nowhitespace: afterproperty;
+	min-width: 969px;
+} /* min-height keeps bg from disapearring to left in firefox_NO__DOTCOMMA__AFTER__*/
+.hide {
+	display:none;
+}
+.center {
+	margin: 0 auto;
+	width: 950px;
+	height: 100%;
+}
+
+.centerf {
+	margin: 0 auto;
+	width: 950px;
+	height: auto;
+}
+
+.clear {
+	clear: both;
+	font-size: 0px;
+}
+
+.hangingindent {
+  padding-left: 22px ;
+  text-indent: -22px ;
+}
+
+.box {
+	float: left;
+	width: 33.33%;
+}
+
+/* --- HEADER --- */
+
+#header {
+	height: 120px;
+	/*background-color: #cc0000;*/
+	background-color: #c00;
+	/*border-bottom: 4px solid #f2bf49;*/
+	border-bottom: 1px solid #e3e3e3;
+}
+
+#header .center {position:relative; }
+
+#headerlinks {
+	color: #eee;
+	position: relative;
+	font-size: .938em;
+	font-family: 'nimbus sans', sans-serif;
+	float:left;
+}
+
+#headerlinks a {
+	text-decoration: none;
+	color: #fff;
+	padding-right: 20px;
+}
+
+#headerlinks a:hover {
+	text-decoration: none;
+	color: #f2bf49;
+}
+
+#headerlinks a:active {
+	text-decoration: none;
+	color: #f2bf49;
+}
+
+#headerlinks a.currentLink {
+	text-decoration: none;
+	color: #f2bf49;
+}
+
+#description {
+	opacity: 0;
+	height: 32px;
+	font-style: oblique;
+	text-align: center;
+	font-size: .9em;
+}
+
+.showDescript {
+	opacity: 1 !important;
+	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=100)" !important;
+	filter:Alpha(opacity=100) !important;
+}
+
+#description p {
+	color: #eee;
+	margin: auto;
+}
+
+#banner {
+	position: absolute;
+	bottom: 0px;
+	width: 450px;
+	height: 120px;
+	background: url(../image/banner3.png) left;
+	background-repeat: no-repeat;
+	cursor: pointer;
+}
+
+#banner a {
+	position: absolute;
+	bottom: 0px;
+	width: 425px;
+	height: 60px;
+}
+
+/* --- ISU INDEX --- */
+
+#index {
+	background: #996;
+	float: right;
+	margin: 0;
+	padding: 0 3px 0 0;
+	white-space: nowrap;
+	width: 418px;
+}
+
+#indexlabel,
+a.abc:link,
+a.abc:visited {
+	float: left;
+	margin: 0;
+	text-decoration: none;
+	color: #fff;
+	font-size: 0.7em;
+}
+
+#indexlabel {
+	background: #000 url(../image/llcurve.gif) bottom left no-repeat;
+	width: 46px;
+	padding: 2px 0 2px 5px;
+	letter-spacing: 2px;
+}
+
+a#indexlabel:hover,
+a#indexlabel:focus { text-decoration: underline }
+a.abc,
+a.abc:link,
+a.abc:visited {
+	background: #996;
+	display: block;
+	width: 14px;
+	padding: 2px 0;
+	text-align: center;
+}
+
+a.abc:hover, a.abc:focus {
+	background: #000;
+	text-decoration: underline;
+}
+/* --- RISE CUSTOM INPUTS --- */
+.riseTB {
+	margin: 0px;
+    margin-top: -3px;
+    padding: 3px;
+    border: 1px solid #CAC7A7;
+    border-radius: 3px;
+    background-color: #fff;
+}
+.riseLBL {
+	margin-right:5px;
+	font-weight:bold;
+}
+.risePlainList {
+	list-style-type: none;
+}
+.riseSubmit {
+	background-color: #CC0000;
+	color: white;
+	border:none;
+	width:150px;
+	height:30px;
+	font-weight:bold;
+	font-family: 'Merriweather', serif;
+}
+.riseBTN {
+	background-color: #CC0000;
+	color: white;
+	border:none;
+	height:30px;
+	margin:5px;
+	font-weight:bold;
+	font-family: 'Merriweather', serif;
+}
+/* --- SEARCH FORM --- */
+/*Copy*/
+#head-links form {
+	float:left;
+	margin-left:20px;
+	width: 152px;
+	height: 30px;
+}
+#head-links input[type=text] {
+	border:1px solid #CAC7A7;
+	margin-top:-3px;
+	width:150px;
+	border-radius: 3px;
+
+}
+/*OG*/
+#search_form {
+	width: 152px;
+	height: 30px;
+	display: inline;
+	margin: 0px;
+	margin-top: -43px;
+	padding: 0px;
+}
+#headerlinks3 {
+	float: right;
+    margin-right: 0px;
+    padding: 0px;
+    margin: 0px;
+    margin-top: -40px;
+}
+#search_form #q {
+	margin: 0px;
+	margin-top: -43px;
+	padding: 3px;
+	border: 1px solid #CAC7A7;
+	border-radius: 3px;
+	background-color: #fff;
+}
+
+/* --- MAIN CONTENT --- */
+
+#main {
+	position: relative;
+	nowhitespace: afterproperty;
+	width: 950px;
+	margin: 0 auto;
+	clear: both;
+	padding: 0px 10px;
+	overflow:hidden;
+	/* margin-bottom must be same height as the footer */
+}
+
+#content {
+	width: 726px;
+	float: right;
+	margin: 12px;
+	padding-top: 1em;
+}
+
+#sidebar {
+	width: 196px;
+	float: left;
+	padding-top: 6px;
+}
+
+/* --- FOOTER --- */
+
+#footer {
+	margin:0px auto;
+	color:#333;
+	width:100%;
+	/*background-image:url('/image/bg-footer.png');
+	background-repeat: no-repeat;
+	background-position: center; */
+	margin:0px;
+	height:280px;
+	font-size:.9em;
+	clear:both;
+	background-color: #f3f3f3;
+	border-top: 1px solid #e3e3e3;
+}
+
+#footer .center {
+	position: relative;
+	margin:0px auto;
+	padding-top: 8em
+	height: 0px;
+}
+
+#footer #logo {
+	float: left;
+	margin-right:10px;
+	margin-top: 115px;
+	padding-right: 24px;
+}
+
+#logo {
+	margin-top: 15px;
+}
+
+#footer #rights {
+	margin:0px auto;
+	border-left:1px solid #CAC7A7;
+	padding:10px;
+	float:left;
+	margin-top: 100px;
+	padding-left: 24px;
+}
+
+/* --- CLEAR FIX --- */
+/* See http://www.cssstickyfooter.com */
+
+.clearfix:after {
+	content: ".";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
+}
+
+.clearfix {
+	display: inline-block
+}
+
+* html .clearfix {
+	height: 1%
+} /* Hides from IE-mac*/
+
+.clearfix {
+	display: block
+} /* End hide from IE-mac */
+
+/* --- HEADINGS --- */
+
+h1,
+h2,
+h3,
+h4 {
+	font-family: 'Merriweather', serif;
+	display: block;
+	color:#000;
+	padding-bottom: .15em;
+}
+
+h1 {
+	font-size: 2em;
+	margin-bottom: 15px;
+	color: #CC0000;
+	font-weight: normal;
+}
+
+h2 {
+	font-size: 1.5em;
+	margin-bottom: 5px;
+	line-height: 1.35em;
+	margin-top: 5px;
+	color: #524727;
+}
+
+h3 {
+	font-size: 1.125em;
+}
+
+h4 {
+	font-size: 1em;
+	margin: 5px;
+}
+
+
+/* --- CONTENT --- */
+
+p {
+	padding: 5px;
+	line-height: 1.35;
+}
+
+#content a:link {
+	text-decoration: none;
+	color: #cc0000;
+}
+#errorLabel{
+	color: #cc0000;
+	font-weight:bold;
+}
+#staffLL:link {
+	text-decoration: none;
+	color: #cc0000;
+}
+#staffLL:hover { border-bottom: 1px dotted #004499 }
+#staffLL:visited {
+	text-decoration: none;
+	border-bottom: 1px dotted silver;
+	color: #cc0000;
+}
+#content a:hover { border-bottom: 1px dotted #004499 }
+#content a:visited {
+	text-decoration: none;
+	border-bottom: 1px dotted silver;
+	color: #cc0000;
+}
+
+#content blockquote {
+	font-size: 1.1em;
+	font-style: italic;
+	font-family: 'Merriweather', serif;
+	display: block;
+	padding: 0 60px;
+}
+
+#content blockquote p {
+	font-size: 1.1em;
+	font-style: italic;
+}
+
+#content blockquote:before,
+blockquote:after {
+	color: silver;
+	display: block;
+	font-size: 4em;
+}
+
+#content blockquote:before {
+	content: open-quote;
+	height: 0;
+	margin-top:.25em;
+	margin-left: -0.5em;
+}
+
+#content blockquote:after {
+	content: close-quote;
+	height: 50px;
+	margin-top: 0em;
+	margin-left: 300px;
+	float: right;
+}
+
+/* --- SIDEBAR --- */
+
+div#sidebarcontact a:link {
+	text-decoration: none;
+	color: #002299;
+}
+
+div#sidebarcontact a:hover { border-bottom: 1px dotted #004499 }
+div#sidebarcontact a:visited {
+	text-decoration: none;
+	border-bottom: 1px dotted silver;
+	color: #448;
+}
+
+/* --- TABLES --- */
+
+table {
+	font-size: .938em;
+	margin-bottom: 10px;
+}
+
+table th {
+	background: #cc0000;
+	color: #FFFFFF;
+	padding: 7px 3px;
+}
+
+table tr:nth-child(odd) {
+	background: transparent;
+}
+
+table td {
+	padding: 5px;
+	vertical-align: middle;
+}
+
+div.sidebyside {
+	float: left;
+	width: 49%;
+}
+ */
+
+/* --- PROJECTS --- */
+
+#projectTable {
+	width: 100%;
+	margin-top:5px;
+}
+
+#projectTable p {
+	line-height: 1.5em
+}
+
+#projectTable tr:first-child {
+	border: 0px
+}
+
+#projectTable tr #projectTable td {
+	border: 0px;
+	padding: .3em;
+	padding-bottom: 2em;
+}
+
+#projectTable td.ava {
+	width: 15%
+}
+
+#projectTable td.ava img {
+	width: 100%
+}
+
+small {
+	font-size: .8em;
+}
+
+.pageSelect {
+	text-align: center;
+	padding:3px;
+	background-color:#ffffff;
+	border:0px;
+	max-width:50%;
+	margin:0 auto;
+}
+
+.pageSelect a {
+	margin-right:5px;
+}
+
+.pageSelect .selected {
+	margin-right:5px;
+}
+
+.projMain {
+	width: 100%;
+	line-height: 2em;
+}
+
+.projMain h1 {
+	margin:0;
+	margin-bottom:15px;
+	font-size: 2em;
+	font-weight: normal
+	border: none;
+}
+
+.projMain h2 {
+	font-size:1.5em;
+	line-height:1em;
+	margin-bottom: 5px;
+	margin-top: 5px;
+	color: #524727;
+}
+
+.projMain ul {
+	list-style-position: inside;
+	margin: 0px;
+	margin-top: 5px;
+}
+
+.projMain p {
+	line-height: 1.5em;
+	padding: 5px;
+	padding-top: 2px;
+	margin-bottom: 1em;
+}
+
+.projMain div.ava {
+	width: 100%;
+	text-align: center;
+}
+
+.projMain .projLeft {
+	width: 69%;
+	float: left;
+	padding-right: 1%;
+}
+
+.projLeft img {
+	float: left;
+	width: 100%;
+	margin: 1em 2px;
+}
+
+.projLeft table {
+	border: 1px solid #ccc;
+	width: 100%;
+}
+
+.projLeft table td { vertical-align: top }
+.projLeft ol, ul {
+	margin: 2px;
+	padding: 0px;
+}
+
+.projLeft ul li {
+	line-height: 1.5em;
+	padding-left: .5em;
+	margin-left: 2em;
+	list-style-position: outside;
+}
+
+ol {
+	counter-reset: li; /* Initiate a counter */
+	margin-left: 0; /* Remove the default left margin */
+	padding-left: 0; /* Remove the default left padding */
+}
+
+ol > li {
+	position: relative; /* Create a positioning context */
+	margin: 0 0 6px 2em; /* Give each list item a left margin to make room for the numbers */
+	padding: 4px 8px; /* Add some spacing around the content */
+	list-style: none; /* Disable the normal item numbering */
+	line-height: 1.2em;
+}
+
+ol > li:before {
+	content: counter(li); /* Use the counter as content */
+	counter-increment: li; /* Increment the counter by 1 */
+	/* Position and style the number */
+	position: absolute;
+	top: -2px;
+	left: -2em;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	width: 1.5em;
+	/* Some space between the number and the content in browsers that support generated content but not positioning it (Camino 2 is one example) */
+	margin-right: 8px;
+	padding: 4px;
+	font-weight: bold;
+	font-family: 'nimbus sans', sans-serif;
+	text-align: center;
+}
+
+li ol, li ul {
+	margin-top: 6px
+}
+
+ol ol li:last-child {
+	margin-bottom: 0
+}
+
+.projMain .projRight {
+	width: 30%;
+	float: right;
+}
+
+.projRight > div {
+	margin-bottom: 1em
+}
+
+.projRight div.ava {
+	text-align: center;
+	box-shadow: 2px 2px 7px #ddd;
+}
+
+.abstract {
+	color: #000;
+}
+
+.projRight div.ava div.holder {
+	padding: .25em;
+	width: 90%;
+	margin: auto;
+}
+
+.projRight div.ava div.holder img {
+	width: 100%
+}
+
+.projRight ul.team {
+	list-style-type: none;
+	line-height: 1.2em;
+}
+
+/* --- LISTS --- */
+
+ol, ul {
+	margin: 0 0 20px 50px;
+}
+
+ol {
+	list-style-type: decimal
+}
+
+ul {
+	list-style-type: disc;
+}
+ul ul {
+	list-style-type: circle;
+}
+
+li {
+	margin-bottom: 5px
+}
+
+/* --- IMAGES --- */
+
+.photo {
+	padding: 0px 10px 0px 0px;
+	height: 250px;
+}
+
+.photo img {
+	border: 1px solid #CAC7A7;
+	height: 250px;
+}
+
+.photo p {
+	padding-top: .2em;
+	margin: 0;
+	font-size: .8em;
+	font-family: 'Merriweather', serif;
+	color: #777;
+}
+
+/* --- ALERT BOX --- */
+
+.alert {
+    padding: 20px;
+    background-color: #CC0000;
+    color: white;
+    margin-bottom: 15px;
+    margin-top: 15px;
+}
+/*Add close button to the alert box*/
+.closebtn {
+    margin-left: 15px;
+    color: white;
+    font-weight: bold;
+    float: right;
+    font-size: 22px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+/* When moving the mouse over the close button */
+.closebtn:hover {
+    color: black;
+}
+
+/* --- GLOSSY MENU --- */
+
+.glossymenu, .glossymenu li, .glossymenu li ul.glossymenu li ul {
+	position: relative;
+	nowhitespace: afterproperty;
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	font-family: ‘Merriweather’, Helvetica, Verdana, Arial, Geneva, sans-serif /*Book Antiqua, Palatino Linotype, Palatino, serif*/;
+	font-size: 1em;
+	width: 196px;
+} /*WIDTH OF MAIN MENU ITEMS_NO__DOTCOMMA__AFTER__*/
+
+.glossymenu li a {
+	display: block;
+	background: white;
+	color: black;
+	text-decoration: none;
+	font-weight: bold;
+	border-left: 4px solid transparent;
+	padding: 6px 0px 6px 10px;
+}
+
+.glossymenu li a:visited, .glossymenu li a:active {
+	text-decoration: none;
+}
+
+.glossymenu li a:hover {
+	border-left:4px solid #f2bf49;
+	color: #cc0000;
+}
+
+.glossymenu li ul li a {
+	border-right: 1px solid #ccc
+}
+
+.glossymenu li > a.currentLink {
+	/*This is the style for the link that relates to what page is currently displayed*/
+	border-left:4px solid #f2bf49;
+}
+
+/* --- GLOSSY MENUS, SUB MENU --- */
+
+.glossymenu li ul {
+	position: absolute;
+	left: 0;
+	top: 0;
+	display: none;
+	margin-left: 0px;
+	border-left: 1px solid silver;
+	width: 196px;
+} /*WIDTH OF SUB MENU ITEMS*/
+
+.glossymenu li ul li {
+	float: left;
+	margin: 0;
+}
+.glossymenu li ul a {
+	width: 190px
+	} /* WIDTH OF SUB MENU ITEMS - 10px padding-left for A elements */
+
+.glossymenu .arrowdiv {
+	position: absolute;
+	nowhitespace: afterproperty;
+	right: 2px;
+	background: /*transparent url(../image/arrow.gif)*/ no-repeat center right;;
+}
+
+.glossymenu .arrowdiv:after {
+	color: #777;
+	content: "\00bb";
+}
+
+.glossymenu li ul li:first-child a {
+	border-top: 1px solid #ccc
+}
+
+/* Holly Hack for IE */
+* html .glossymenu li {
+	float: left;
+	height: 1%;
+}
+
+* html .glossymenu li a { height: 1% }
+
+/* --- NEWS MENU --- */
+
+#news dl {
+	margin: 10px 5px 10px 5px
+}
+
+#news dl a {
+	text-decoration: underline;
+	color: #003366;
+}
+
+#news dt {
+	font-size: 1em;
+	font-weight: bold;
+	border-bottom: black 1px dotted;
+}
+
+#news dd {
+	font-size: 0.9em;
+	padding: 5px 5px 12px 5px;
+}
+
+/* --- NEWS STYLES --- */
+
+#news ul {
+	margin: 10px 5px 10px 5px;
+	list-style-type: circle;
+	list-style-position: inside;
+}
+
+#news ul {
+	font-size: 1em;
+	font-weight: normal;
+}
+#news ul li a {
+	color: #000;
+	border: 0px;
+}
+
+/* --- SIDE BAR CONTACT INFO --- */
+
+#sidebarcontact ul {
+	text-align: left;
+	margin: 0px;
+	list-style-type: none;
+}
+#sidebarcontact p {
+	text-align: left;
+	padding: 0px;
+	margin-bottom: 1em;
+}
+#sidebarcontact ul li { margin: 0px }
+#sidebarcontact {
+	font-size: .8em;
+	color: #555;
+	width: 100%;
+	text-align: center;
+	padding: 5px;
+	margin-bottom: 1em;
+}
+#sidebar {
+	border-top: 0px;
+}
+
+/* --- CONTACT FORM --- */
+
+section.sidecontact {
+	float:right;
+	width:55%;
+	padding:3px;
+}
+
+section.sidecontact h2 {
+	margin:3px 0px;
+	text-align:center;
+}
+
+.sidecontact label {
+	font-size:.9em;
+	width:25%;
+	display:block;
+	float:left;
+	font-weight:600;
+	height:20px;
+	margin-top:4px;
+	text-align:right;
+}
+
+.sidecontact input[type=text] {
+	margin-top:2px;
+	height:20px;
+	width:70%;
+	display:block;
+	float: right;
+	border:1px solid #ddd;
+	padding-left: 5px;
+	font-family: 'nimbus sans', sans-serif;
+}
+
+.sidecontact input[type=text]:focus, textarea:focus {
+	outline:1px solid #8499a5;
+	font-family: 'nimbus sans', sans-serif;
+}
+
+.err {
+	outline:1px solid #f00 !important;
+}
+
+ul.errors {
+	font-size:.8em;
+	display:none;
+}
+ul.errors li:first-child {
+	list-style-type:none;
+}
+
+ul.errors li {
+	color:#900;
+}
+
+.sidecontact textarea {
+	width:70%;
+	display:block;
+	float: right;
+	border:1px solid #ddd;
+	margin:0px;
+	margin-top:2px;
+	padding:0px;
+	font-size:1.1em;
+	height:300px;
+	padding-left: 5px;
+}
+
+.sidecontact input[type=submit] {
+	float:right;
+	margin:0px 3px;
+}
+
+.sidecontact hr {
+	width:100%;
+	text-align:center;
+	color:#eee;
+	height: 1px;
+	border:0px;
+	background-color:#eee;
+	float:right;
+	margin:10px auto;
+}
+
+form.form {
+	padding:1em;
+	padding-top:0;
+	margin:1em 4em;
+	border:1px solid #ccc;
+}
+
+form.form input[type="text"], form.form input[type="password"] {
+	border: 1px solid #ccc;
+}
+
+form.form label {
+	font-weight:bold;
+	color:#000;
+	width:120px;
+}
+
+form#loginForm {
+}
+
+form.form .center {
+	text-align:center;
+}
+
+form.form .align {
+	width: 95%;
+	margin: 0 auto;
+}
+
+form.form .align label {
+	width: 25%;
+	display: inline-block;
+	text-align: right;
+	margin:.5em 2%;
+	height:1.5em;
+}
+
+form.form .align label.long {
+	font-size: .8em;
+}
+
+input#regcode {
+	font-family:'Merriweather', serif;
+}
+
+form.form .align input {
+	width: 60%;
+	margin:.5em 0%;
+	height: 1.5em;
+	font-weight: bold;
+}
+
+form.form .align input[type='submit'] {
+	width: auto;
+	margin:0 .25em;
+	font-weight:normal;
+}
+
+/* --- TABS --- */
+
+.shadetabs {
+	padding: 3px 0;
+	margin: 1px 0 1px 0;
+	font: bold 1em;
+	font-family: inherit;
+	list-style-type: none;
+	text-align: center;
+} /*text-align used to select alignment of menu*/
+
+.shadetabs li {
+	display: inline;
+	margin: 0;
+}
+
+.shadetabs li a {
+	text-decoration: none;
+	position: relative;
+	z-index: 1;
+	padding: 3px 10px;
+	margin-right: 3px;
+	color:#fff;
+}
+
+.shadetabs li a:hover {
+	text-decoration: none
+}
+
+.shadetabs li a.selected {
+	position: relative;
+	top: 1px;
+	background: white;
+	color: white;
+	border-bottom-color: white;
+} /*selected main tab style */
+
+.shadetabs li a.selected:hover {
+	text-decoration: none
+}
+
+.tabcontent {
+	display: none
+}
+
+@media print {
+	.tabcontent {
+		display: block !important
+	}
+}
+
+.tabs_wrap {
+	width: 197px;
+	margin-bottom: 1em;
+} /*style of tab content container*/
